@@ -114,6 +114,14 @@ function App() {
             <span>Cream and Onion</span>
             <div className="shop-pill-img-placeholder" style={{ backgroundImage: "url('/can4.jpeg')" }}></div>
           </div>
+          <div className="shop-pill">
+            <span>Salt and Pepper</span>
+            <div className="shop-pill-img-placeholder" style={{ backgroundImage: "url('/salt_pepper.jpeg')" }}></div>
+          </div>
+          <div className="shop-pill">
+            <span>Spicy Tomato</span>
+            <div className="shop-pill-img-placeholder" style={{ backgroundImage: "url('/spicy_tomato.jpeg')" }}></div>
+          </div>
         </div>
       </section>
 
@@ -190,6 +198,42 @@ function App() {
                   <span className="price">$10.23</span>
                 </div>
                 <button className="cart-btn" onClick={() => addToCart({ id: 'p4', name: 'Cream and Onion', price: 10.23, image: '/can4.jpeg' })}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div className="product-card">
+              <div className="product-img-wrap">
+                <img src="/salt_pepper.jpeg" alt="Salt and Pepper" />
+              </div>
+              <div className="product-info">
+                <div>
+                  <h4>Salt and Pepper</h4>
+                  <span className="price">$10.23</span>
+                </div>
+                <button className="cart-btn" onClick={() => addToCart({ id: 'p5', name: 'Salt and Pepper', price: 10.23, image: '/salt_pepper.jpeg' })}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div className="product-card">
+              <div className="product-img-wrap">
+                <img src="/spicy_tomato.jpeg" alt="Spicy Tomato" />
+              </div>
+              <div className="product-info">
+                <div>
+                  <h4>Spicy Tomato</h4>
+                  <span className="price">$10.23</span>
+                </div>
+                <button className="cart-btn" onClick={() => addToCart({ id: 'p6', name: 'Spicy Tomato', price: 10.23, image: '/spicy_tomato.jpeg' })}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
                     <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -346,7 +390,7 @@ function App() {
                 </div>
               </div>
               <div className="info-card-small">
-                <img src="/media__1773162826622.png" alt="Quality" />
+                <img src="/plant_protein_new.jpeg" alt="Quality" />
                 <div className="info-desc">
                   <h4>Plant-Based Protein Power</h4>
                   <p>Naturally rich in essential amino acids to fuel your body and keep you full longer.</p>
