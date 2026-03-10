@@ -22,7 +22,7 @@ function App() {
       <Cart />
       {/* Navbar representing the screenshot */}
       <header className="navbar container">
-        <div className="logo">SNACK<span className="brand-sa">शा</span></div>
+        <div className="logo">SNACK<span className="brand-sa">सा</span></div>
         <nav className="nav-links">
           <a href="#products">PRODUCTS</a>
           <a href="#story">STORY</a>
@@ -317,7 +317,7 @@ function App() {
         <div className="perfect-box">
           <div className="perfect-box-content">
             <h2>NUTRITION WITHOUT COMPROMISE</h2>
-            <p>Choose 4 to 12 of your favorite Snackशा cans and save up to 15% on your custom bundle.</p>
+            <p>Choose 4 to 12 of your favorite Snackसा cans and save up to 15% on your custom bundle.</p>
             <button className="btn btn-primary"><span className="btn-icon"></span> Start Bundling</button>
           </div>
           <div className="perfect-box-image-area">
@@ -401,7 +401,7 @@ function App() {
                 <img src="/group_snacking_1773162932336.png" alt="Lifestyle" />
                 <div className="info-desc">
                   <h4>Fits Any Lifestyle</h4>
-                  <p>Whether you're keto, vegan, or gluten-free, Snackशा fits right into your daily routine.</p>
+                  <p>Whether you're keto, vegan, or gluten-free, Snackसा fits right into your daily routine.</p>
                 </div>
               </div>
             </div>
@@ -442,11 +442,11 @@ function App() {
         </div>
 
         <div className="massive-logo-wrap text-center">
-          <h1 className="massive-logo">SNACK<span className="brand-sa">शा</span></h1>
+          <h1 className="massive-logo">SNACK<span className="brand-sa">सा</span></h1>
         </div>
 
         <div className="footer-bottom container">
-          <p>© 2024, Snackशा Powered by Shopify</p>
+          <p>© 2024, Snackसा Powered by Shopify</p>
           <div className="email-chip">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '8px', verticalAlign: 'middle' }}>
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
