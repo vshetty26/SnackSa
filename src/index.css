@@ -160,6 +160,16 @@ a {
   color: var(--dark);
 }
 
+.brand-sa {
+  color: var(--orange);
+  display: inline-block;
+  transform: rotate(-4deg) scale(1.1);
+  margin-left: 0.15em;
+  font-style: italic;
+  font-weight: 800;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
 .nav-links {
   display: flex;
   gap: 2.5rem;
@@ -918,6 +928,12 @@ a {
   font-family: 'Bebas Neue', sans-serif;
   letter-spacing: -2px;
   margin: 0;
+}
+
+.massive-logo .brand-sa {
+  text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.05);
+  font-family: 'Inter', sans-serif;
+  /* Fallback if Bebas fails on the tilt */
 }
 
 .footer-bottom {

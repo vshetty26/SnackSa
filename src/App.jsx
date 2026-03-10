@@ -5,13 +5,24 @@ import Cart from './Cart';
 
 function App() {
   const { toggleCart, addToCart, cartCount } = useCart();
+  const [testiIndex, setTestiIndex] = React.useState(0);
+
+  const testimonialsData = [
+    { text: "Pre-workout fuel, post-workout recovery, or anytime energy — makhana keeps you going strong and tastes awesome.", avatar: "/icon_protein_1773162535801.png", name: "Active Lifestyle", date: "21 July, 2023" },
+    { text: "Kids love the crunch, parents love the nutrition. It's an absolute win-win for the whole family's health.", avatar: "/icon_calorie_1773162551562.png", name: "Family-Friendly", date: "21 July, 2023" },
+    { text: "Beat the 3 PM slump with a protein-rich snack that actually makes you feel good and keeps you productive.", avatar: "/icon_gluten_1773162586764.png", name: "Office Essential", date: "21 July, 2023" },
+    { text: "It perfectly satisfies the 5 PM cravings with zero guilt, the perfect tangy taste!", avatar: "/icon_minerals_1773162607816.png", name: "Guilt-free Snacker", date: "15 August, 2023" }
+  ];
+
+  const nextTesti = () => setTestiIndex(p => (p + 1) % testimonialsData.length);
+  const prevTesti = () => setTestiIndex(p => (p - 1 + testimonialsData.length) % testimonialsData.length);
 
   return (
     <div className="app">
       <Cart />
       {/* Navbar representing the screenshot */}
       <header className="navbar container">
-        <div className="logo">SNACKSA</div>
+        <div className="logo">SNACK<span className="brand-sa">सा</span></div>
         <nav className="nav-links">
           <a href="#products">PRODUCTS</a>
           <a href="#story">STORY</a>
@@ -306,7 +317,7 @@ function App() {
         <div className="perfect-box">
           <div className="perfect-box-content">
             <h2>NUTRITION WITHOUT COMPROMISE</h2>
-            <p>Choose 4 to 12 of your favorite SnackSa cans and save up to 15% on your custom bundle.</p>
+            <p>Choose 4 to 12 of your favorite Snackसा cans and save up to 15% on your custom bundle.</p>
             <button className="btn btn-primary"><span className="btn-icon"></span> Start Bundling</button>
           </div>
           <div className="perfect-box-image-area">
@@ -322,43 +333,26 @@ function App() {
       < section className="testimonials container" >
         <h2 className="text-center mb-4">LOVED BY SNACKERS NATIONWIDE</h2>
         <div className="testimonials-track">
-          <button className="nav-arrow left">&larr;</button>
+          <button className="nav-arrow left" onClick={prevTesti}>&larr;</button>
           <div className="testimonial-cards">
-            <div className="t-card">
-              <div className="quote-icon">❝</div>
-              <p>Pre-workout fuel, post-workout recovery, or anytime energy — makhana keeps you going strong and tastes awesome.</p>
-              <div className="t-user">
-                <img src="/icon_protein_1773162535801.png" alt="user" className="avatar" />
-                <div>
-                  <h5>Active Lifestyle</h5>
-                  <span>21 July, 2023</span>
+            {[0, 1, 2].map((offset) => {
+              const t = testimonialsData[(testiIndex + offset) % testimonialsData.length];
+              return (
+                <div className="t-card" key={t.name + offset}>
+                  <div className="quote-icon">❝</div>
+                  <p>{t.text}</p>
+                  <div className="t-user">
+                    <img src={t.avatar} alt="user" className="avatar" />
+                    <div>
+                      <h5>{t.name}</h5>
+                      <span>{t.date}</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="t-card">
-              <div className="quote-icon">❝</div>
-              <p>Kids love the crunch, parents love the nutrition. It's an absolute win-win for the whole family's health.</p>
-              <div className="t-user">
-                <img src="/icon_calorie_1773162551562.png" alt="user" className="avatar" />
-                <div>
-                  <h5>Family-Friendly</h5>
-                  <span>21 July, 2023</span>
-                </div>
-              </div>
-            </div>
-            <div className="t-card">
-              <div className="quote-icon">❝</div>
-              <p>Beat the 3 PM slump with a protein-rich snack that actually makes you feel good and keeps you productive.</p>
-              <div className="t-user">
-                <img src="/icon_gluten_1773162586764.png" alt="user" className="avatar" />
-                <div>
-                  <h5>Office Essential</h5>
-                  <span>21 July, 2023</span>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
-          <button className="nav-arrow right">&rarr;</button>
+          <button className="nav-arrow right" onClick={nextTesti}>&rarr;</button>
         </div>
       </section >
 
@@ -407,7 +401,7 @@ function App() {
                 <img src="/group_snacking_1773162932336.png" alt="Lifestyle" />
                 <div className="info-desc">
                   <h4>Fits Any Lifestyle</h4>
-                  <p>Whether you're keto, vegan, or gluten-free, SnackSa fits right into your daily routine.</p>
+                  <p>Whether you're keto, vegan, or gluten-free, Snackसा fits right into your daily routine.</p>
                 </div>
               </div>
             </div>
@@ -448,11 +442,11 @@ function App() {
         </div>
 
         <div className="massive-logo-wrap text-center">
-          <h1 className="massive-logo">SNACKSA</h1>
+          <h1 className="massive-logo">SNACK<span className="brand-sa">सा</span></h1>
         </div>
 
         <div className="footer-bottom container">
-          <p>© 2024, SnackSa Powered by Shopify</p>
+          <p>© 2024, Snackसा Powered by Shopify</p>
           <div className="email-chip">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '8px', verticalAlign: 'middle' }}>
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
